@@ -1,0 +1,362 @@
+{% load static %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anura | The Green Sanctuary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+       /* Anura Ayurveda Color System */
+.bg-forest { background-color: #034326; }
+.text-forest { color: #034326; }
+
+.bg-gold { background-color: #D6B476; }
+.text-gold { color: #D6B476; }
+
+.bg-cream { background-color: #FFEED0; }
+.text-cream { color: #FFEED0; }
+
+.border-gold { border-color: #D6B476; }
+
+
+        .hero-overlay {
+    background:
+        linear-gradient(
+            75deg,
+            rgba(3, 67, 38, 0.92) 0%,
+            rgba(3, 67, 38, 0.3) 10%
+        ),
+        url("{% static 'images/Newyearpost1.JPG' %}");
+    background-size: cover;
+    background-position: center;
+}
+
+
+        .img-zoom:hover img { transform: scale(1.1); transition: transform 0.8s ease; }
+
+        /* Anura Ayurveda Logo Font */
+.logo-main {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.logo-sub {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+}
+
+    </style>
+</head>
+
+<body class="bg-[#D6B476] text-[#034326]">
+
+
+    <nav class="flex items-center justify-between px-10 py-4 bg-[#D6B476] sticky top-0 z-50 shadow-md ">
+
+       <!-- Left: Logo -->
+       <div class="flex items-center h-full">
+    <img
+        src="{% static 'images/logo1.png' %}"
+        alt="Anura Ayurveda Logo"
+        class="h-16 w-auto object-contain translate-y-[1px]"
+    >
+</div>
+        <div class="hidden lg:flex space-x-6 text-sm font-medium text-black">
+             <a href="{% url 'home' %}" class="text-[#FFEED0] border-b-2 border-[#FFEED0]">Home</a>
+            <a href="{% url 'about' %}" class="hover:text-[#FFEED0]">About</a>
+            <a href="{% url 'team' %}" class="hover:text-[#FFEED0]">Our Team</a>
+            <a href="{% url 'gallery' %}" class="hover:text-[#FFEED0]">Gallery</a>
+            <a href="{% url 'contact' %}" class="hover:text-[#FFEED0]">Contact Us</a>
+        </div>
+        <a href="{% url 'book_consultation' %}">
+        <button class="bg-[#034326] text-[#FFEED0] px-6 py-2 rounded-full text-sm font-bold hover:bg-[#022d1a] transition">
+
+            Book Consultation
+        </button>
+        </a>
+    </nav>
+
+
+     <header class="relative h-[100vh] hero-overlay flex items-center px-10 md:px-20">
+
+        <div class="max-w-xl text-white">
+
+            <div class="flex flex-col sm:flex-row gap-6">
+                <a href="{% url 'book_consultation' %}">
+                <button class="bg-[#D6B476] text-[#034326] px-10 py-4 rounded-full font-bold text-lg hover:bg-[#c9a85f] transition-all shadow-2xl">
+                    Start Your Journey</button></a>
+                <a href="{% url 'gallery' %}">
+                <button class="border border-white/30 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition">View Our Garden</button>
+            </div>
+        </div>
+
+
+    </header>
+
+    <section id="services" class="pt-48 pb-24 px-10 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div>
+                <span class="text-emerald-600 font-bold uppercase tracking-widest text-sm">Our Specialties</span>
+                <h2 class="text-5xl text-forest mt-2">Natural Treatments</h2>
+            </div>
+            <p class="text-emerald-900/60 max-w-sm text-sm">Carefully curated treatments using herbs grown in our own medicinal gardens.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="img-zoom group cursor-pointer">
+                <div class="overflow-hidden rounded-[2.5rem] mb-6 h-96 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl text-forest font-bold mb-2">Shirodhara</h3>
+                <p class="text-sm text-emerald-900/50 leading-relaxed">Perfect for mental stress and deep sleep restoration.</p>
+            </div>
+            <div class="img-zoom group cursor-pointer">
+                <div class="overflow-hidden rounded-[2.5rem] mb-6 h-96 shadow-xl">
+                    <img src="https://media.istockphoto.com/id/490668052/photo/caucasian-girl-with-natural-mask-her-face.jpg?s=612x612&w=0&k=20&c=prZXSsBz3eFDCmM0W-l3Ex1Ja1xbJe0tkxz_w5h3cH8=" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl text-forest font-bold mb-2">Swedana</h3>
+                <p class="text-sm text-emerald-900/50 leading-relaxed">Herbal steam therapy to open pores and release deep toxins.</p>
+            </div>
+            <div class="img-zoom group cursor-pointer">
+                <div class="overflow-hidden rounded-[2.5rem] mb-6 h-96 shadow-xl">
+                    <img src="https://media.istockphoto.com/id/626353880/photo/ayurveda-oil-treatment.jpg?s=612x612&w=0&k=20&c=OYxXS-xGRQ6yKLRgPEm2JNrowZEyPaideocYEz0cn_c=" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl text-forest font-bold mb-2">Abhyanga</h3>
+                <p class="text-sm text-emerald-900/50 leading-relaxed">Warm medicated oil massage for joint health and vigor.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="family" class="py-24 bg-[#034326] text-[#FFEED0] overflow-hidden relative">
+
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-emerald-800/30 skew-x-12 translate-x-32"></div>
+        <div class="max-w-7xl mx-auto px-10 flex flex-col md:flex-row items-center gap-20 relative z-10">
+            <div class="md:w-1/2">
+                <div class="relative inline-block">
+                    <img src="https://www.zingavita.com/cdn/shop/files/aboutus-mobile.jpg?v=1720160319" class="rounded-[3rem] shadow-2xl grayscale hover:grayscale-0 transition duration-1000" alt="Elderly Care">
+                    <div class="absolute -top-6 -left-6 bg-emerald-400 text-forest p-6 rounded-3xl font-black text-center shadow-2xl">
+                        TRUSTED BY<br>FAMILIES
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-5xl md:text-6xl mb-8 leading-tight">Family Packages<br></h2>
+                <p class="text-emerald-100/70 text-lg mb-10 leading-relaxed">
+                    At Anura, we believe health is the greatest inheritance. Our specialized **Geriatric Care programs** are designed to give parents the vitality they deserve, while providing modern booking ease for the next generation.
+                </p>
+                <ul class="space-y-4 mb-12">
+                    <li class="flex items-center gap-4 text-emerald-200">
+                        <span class="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center text-forest text-xs font-bold">✓</span>
+                        Joint Pain Management for Seniors
+                    </li>
+                    <li class="flex items-center gap-4 text-emerald-200">
+                        <span class="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center text-forest text-xs font-bold">✓</span>
+                        Family Consultation Rooms
+                    </li>
+                </ul>
+                <button class="bg-white text-emerald-900 px-10 py-4 rounded-full font-bold hover:bg-emerald-400 transition-colors shadow-lg">View Family Packages</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="sanctuary" class="py-24 px-10">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl text-forest">The Green Sanctuary</h2>
+            <p class="mt-4 text-emerald-900/40">A visual tour of our treatment rooms and herbal gardens.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover rounded-[2rem] hover:shadow-2xl transition">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover rounded-[2rem] hover:shadow-2xl transition mt-10">
+            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover rounded-[2rem] hover:shadow-2xl transition">
+            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover rounded-[2rem] hover:shadow-2xl transition mt-10">
+        </div>
+    </section>
+ <div class="fixed bottom-10 left-6 flex flex-col space-y-4 z-50">
+
+    <!-- CALL BUTTON -->
+    <a href="tel:+919746603646"
+       class="w-12 h-12 bg-[#034326] text-[#D6B476] rounded-full
+              flex items-center justify-center shadow-xl
+              hover:scale-110 transition"
+       title="Call Us">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.72 11.72 0 003.7.59 1 1 0 011 1V20a1 1 0 01-1 1A16 16 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.7 1 1 0 01-.27 1.11l-2.2 2.2z"/>
+        </svg>
+    </a>
+
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/919746603646?text=Hello%2C%20I%20need%20help%20with%20booking%20a%20consultation."
+   target="_blank"
+   rel="noopener noreferrer"
+   class="w-12 h-12 bg-[#034326] text-[#D6B476] rounded-full
+          flex items-center justify-center shadow-xl
+          hover:scale-110 transition"
+   title="Chat on WhatsApp">
+
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.025 3.204l-.548 2.037 2.058-.541c.952.518 1.989.857 3.233.858 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.758-5.768-5.758zm3.411 8.21c-.144.406-.833.743-1.135.789-.283.042-.653.076-1.045-.053-.246-.081-.555-.192-.937-.36-1.6-.702-2.612-2.338-2.692-2.446-.08-.108-.655-.873-.655-1.666s.414-1.184.559-1.334c.145-.15.315-.187.421-.187h.3c.091 0 .211.002.301.213.111.26.38.927.413.996.033.069.055.149.01.24-.045.091-.068.146-.136.225-.068.079-.143.176-.204.236-.069.068-.141.141-.061.279.08.138.355.586.761.948.523.465.964.609 1.102.677.138.069.218.057.299-.037.081-.095.344-.403.436-.54.092-.138.185-.115.312-.069.127.047.807.381.947.45.14.07.234.103.268.161.034.057.034.331-.11.737z"/>
+    </svg>
+</a>
+
+
+</div>
+
+
+    <!-- Live Chat Trigger -->
+<div class="fixed bottom-0 right-6 z-50">
+
+    <!-- Online badge -->
+    <div class="flex items-center gap-2 bg-[#FFEED0] border border-[#D6B476] px-3 py-1 rounded-t-lg">
+        <span class="text-red-500 font-bold">●</span>
+        <span class="text-xs font-semibold">We are Online!</span>
+    </div>
+
+    <!-- Button -->
+    <button onclick="toggleChat()"
+        class="bg-[#034326] text-[#FFEED0] px-5 py-2 rounded-t-lg font-bold text-xs w-full">
+        💬 Live Chat
+    </button>
+</div>
+<!-- Chat Box -->
+<div id="chatBox"
+     class="hidden fixed bottom-20 right-6 w-80 bg-white rounded-2xl shadow-2xl z-50 overflow-hidden">
+
+    <!-- Header -->
+<div class="bg-[#034326] p-3 flex justify-between items-center">
+
+    <!-- Logo -->
+    <div class="flex items-center">
+        <img
+            src="{% static 'images/logo2.png' %}"
+            alt="Anura Ayurveda Logo"
+            class="h-8 w-auto object-contain"
+        >
+    </div>
+
+    <!-- Close Button -->
+    <button onclick="toggleChat()" class="text-[#FFEED0] text-xl font-bold">
+        ×
+    </button>
+</div>
+
+
+    <!-- Messages -->
+    <div id="chatMessages"
+         class="p-4 space-y-3 text-sm h-64 overflow-y-auto bg-[#F9FAF9]">
+
+        <div class="bg-emerald-100 p-3 rounded-xl w-fit">
+            Namaste 👋 How can we help you today?
+        </div>
+
+    </div>
+
+    <!-- Preset Questions -->
+    <div class="p-3 border-t space-y-2">
+
+        <button onclick="sendMessage('How to book a consultation?')"
+            class="w-full text-left bg-white border rounded-xl px-3 py-2 hover:bg-gray-100">
+            📅 How to book a consultation?
+        </button>
+
+        <button onclick="sendMessage('Consultation fees details')"
+            class="w-full text-left bg-white border rounded-xl px-3 py-2 hover:bg-gray-100">
+            💰 Consultation fees details
+        </button>
+
+        <button onclick="sendMessage('Doctor availability')"
+            class="w-full text-left bg-white border rounded-xl px-3 py-2 hover:bg-gray-100">
+            👨‍⚕️ Doctor availability
+        </button>
+
+        <button onclick="openWhatsApp()"
+            class="w-full bg-[#25D366] text-white rounded-xl px-3 py-2 font-semibold">
+            📲 Chat on WhatsApp
+        </button>
+
+    </div>
+</div>
+
+
+
+    <footer class="bg-forest text-emerald-100/50 py-20 px-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="md:col-span-2">
+                <h3 class="text-3xl text-white mb-6">anura</h3>
+                <p class="max-w-sm mb-10">The best Ayurveda hospital in Kochi, offers Kerala's finest Panchakarma treatments and authentic therapies for holistic wellness.</p>
+                <div class="flex space-x-4">
+                    <div class="w-10 h-10 border border-emerald-500/20 rounded-full flex items-center justify-center hover:bg-emerald-500 hover:text-white transition cursor-pointer">Fb</div>
+                    <div class="w-10 h-10 border border-emerald-500/20 rounded-full flex items-center justify-center hover:bg-emerald-500 hover:text-white transition cursor-pointer">Ig</div>
+                </div>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Navigation</h5>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="{% url 'home' %}" class="hover:text-emerald-400">Home</a></li>
+                    <li><a href="{% url 'about' %}" class="hover:text-emerald-400">About Us</a></li>
+                    <li><a href="#" class="hover:text-emerald-400">Services</a></li>
+                    <li><a href="{% url 'contact' %}" class="hover:text-emerald-400">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Reach Out</h5>
+                <p class="text-sm leading-loose">Pullamkottu Cheri Estate, Kerala<br>+91 9961883203<br>info@anuraayurveda.co.in</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-emerald-500/10 mt-20 pt-10 text-center text-xs">
+            © 2026 Anura Ayurvedic Centre. Built for Generations.
+        </div>
+    </footer>
+
+<script>
+function toggleChat() {
+    document.getElementById("chatBox").classList.toggle("hidden");
+}
+
+function sendMessage(question) {
+    const chat = document.getElementById("chatMessages");
+
+    chat.innerHTML += `
+        <div class="bg-[#034326] text-white p-3 rounded-xl w-fit ml-auto">
+            ${question}
+        </div>
+    `;
+
+    let answer = "";
+
+    if (question.includes("book")) {
+        answer = "You can book a consultation from the Book Consultation page. Our team will confirm your slot via phone.";
+    } else if (question.includes("fees")) {
+        answer = "Consultation fees depend on the doctor and treatment type. Please contact us for details.";
+    } else if (question.includes("availability")) {
+        answer = "Doctors are available Monday to Saturday, 9 AM to 6 PM.";
+    }
+
+    setTimeout(() => {
+        chat.innerHTML += `
+            <div class="bg-emerald-100 p-3 rounded-xl w-fit">
+                ${answer}
+            </div>
+        `;
+        chat.scrollTop = chat.scrollHeight;
+    }, 500);
+}
+
+function openWhatsApp() {
+    window.open(
+        "https://wa.me/919876543210?text=Hello%2C%20I%20need%20help%20with%20consultation.",
+        "_blank"
+    );
+}
+</script>
+
+</body>
+</html>

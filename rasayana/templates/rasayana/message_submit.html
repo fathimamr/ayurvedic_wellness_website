@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Received | Rasayana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2 { font-family: 'Playfair Display', serif; }
+
+        .fade-up {
+            animation: fadeUp 0.8s ease-out forwards;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="bg-[#F4F9F4] min-h-screen flex items-center justify-center p-6">
+
+    <div class="max-w-xl w-full bg-white rounded-[3rem] shadow-2xl shadow-emerald-900/10 p-10 md:p-12 text-center border border-emerald-50 fade-up">
+
+        <div class="w-20 h-20 bg-emerald-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-8 rotate-3 shadow-lg shadow-emerald-200">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+        </div>
+
+        <h1 class="text-3xl md:text-4xl text-[#1B3022] mb-4">Message Sent Successfully!</h1>
+        <p class="text-gray-500 mb-8">
+            Thank you for reaching out to us. We’ve received your inquiry regarding family wellness and geriatric care.
+        </p>
+
+        <div class="text-left space-y-6 mb-10">
+            <div class="flex items-center gap-4">
+                <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">1</div>
+                <p class="text-sm text-emerald-900 font-medium">Your message has been assigned to our patient coordinator.</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">2</div>
+                <p class="text-sm text-emerald-900 font-medium">We will review your specific health concerns.</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">3</div>
+                <p class="text-sm text-emerald-900 font-medium">Expect a response via email or phone within 24 business hours.</p>
+            </div>
+        </div>
+
+        <div class="border-t border-emerald-50 pt-8">
+            <p class="text-xs text-gray-400 mb-6 uppercase tracking-widest">In the meantime, feel free to explore</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="{% url 'gallery' %}" class="text-xs font-bold text-emerald-700 hover:text-emerald-900 underline decoration-emerald-200 underline-offset-4">View Sanctuary Gallery</a>
+                <span class="text-gray-200">|</span>
+                <a href="{% url 'home' %}" class="text-xs font-bold text-emerald-700 hover:text-emerald-900 underline decoration-emerald-200 underline-offset-4">Return to Homepage</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

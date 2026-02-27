@@ -1,0 +1,264 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Anura Ayurvedic Centre</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        .about-banner {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="bg-[#FFEED0] text-[#034326]">
+
+
+    <nav class="flex items-center justify-between px-10 py-4 bg-[#D6B476] sticky top-0 z-50 shadow-md border-b border-[#D6B476]/40">
+
+
+         <!-- Left: Logo -->
+       <div class="flex items-center h-full">
+    <img
+        src="{% static 'images/logo1.png' %}"
+        alt="Anura Ayurveda Logo"
+        class="h-16 w-auto object-contain translate-y-[1px]"
+    >
+</div>
+        <div class="hidden lg:flex space-x-6 text-sm font-medium text-black">
+             <a href="{% url 'home' %}" class="hover:text-[#FFEED0]">Home</a>
+            <a href="{% url 'about' %}" class="text-[#FFEED0] border-b-2 border-[#FFEED0]">About</a>
+            <a href="{% url 'team' %}" class="hover:text-[#FFEED0]">Our Team</a>
+            <a href="{% url 'gallery' %}" class="hover:text-[#FFEED0]">Gallery</a>
+            <a href="{% url 'contact' %}" class="hover:text-[#FFEED0]">Contact Us</a>
+        </div>
+        <a href="{% url 'book_consultation' %}">
+        <button class="bg-[#034326] text-[#FFEED0] px-6 py-2 rounded-full text-sm font-bold hover:bg-[#022d1a] transition">
+    Book Consultation
+</button>
+
+        </a>
+    </nav>
+
+     <section class="relative h-[350px] about-banner flex flex-col justify-center px-10 md:px-24">
+        <h2 class="text-white text-4xl md:text-5xl lg:text-6xl mb-4">Welcome to ANURA<br> AYURVEDIC CENTRE</h2>
+        <div class="flex items-center space-x-2 text-sm">
+            <a href="#" class="text-white">Home</a>
+            <span class="text-[#D6B476]">/</span>
+            <span class="text-[#D6B476]">About</span>
+        </div>
+    </section>
+
+    <section class="py-20 px-10 md:px-24 max-w-7xl mx-auto relative">
+
+        <div class="mb-6">
+            <span class="text-[#034326] font-bold uppercase tracking-widest text-xs
+border-b-2 border-[#D6B476] pb-1">
+ABOUT US</span>
+        </div>
+
+        <h3 class="text-3xl md:text-5xl text-[#034326]">
+
+            Experience the Art of Scientific Ayurveda
+        </h3><br>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-6 text-gray-600 leading-relaxed">
+                <p class="text-xl font-semibold text-[#034326]">Anura Ayurveda</p>
+                <p class="text-[#3b3b3b]">
+                    Anura Ayurveda means Path of (Ayana) essence (Rasa) in Sanskrit. In ancient Ayurveda, the term is referred to lightening one's lifespan through science. Anura looks forward to offering long and healthy life with a sharp memory, enhancing youthfulness, and promoting a joyous spirit.
+                </p>
+                <p>
+                    Anura promotes a holistic approach to Ayurveda treatments in Kerala and therapies. We treat the concerns of your body, mind, and soul. Ayurveda has effective methods to cure modern-day illnesses, lifestyle health concerns, and prevention of diseases. Anura's highly trained doctors offer high-quality healthcare services to everyone by a unique combination of traditional Ayurveda mixture and sophisticated diagnostics to take care of critical health issues and general wellness.
+                </p>
+            </div>
+            <div class="relative">
+                <img src="https://sanjivaniayurveda.in/assets/img/ayurvedic-clinic-in-vadodara.jpg" class="rounded-2xl shadow-2xl" alt="Herbal Wisdom">
+                <div class="absolute -bottom-6 -left-6 bg-[#034326] p-4
+rounded-lg shadow-xl border-t-4 border-[#D6B476]">
+
+
+                    <p class="text-[10px] font-bold text-center text-[#FFEED0]">NABH CERTIFIED<br>HOSPITAL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#034326] py-20 px-10 md:px-24">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div class="bg-[#FFEED0] p-10 rounded-3xl shadow-sm
+border border-[#D6B476]/40">
+
+                <h4 class="text-2xl text-[#034326] mb-4">Authenticity</h4>
+                <p class="text-sm text-[#4b4b4b]">Traditional therapies performed by certified practitioners using home-grown herbs.</p>
+            </div>
+            <div class="bg-[#FFEED0] p-10 rounded-3xl shadow-sm
+border border-[#D6B476]/40">
+
+                <h4 class="text-2xl text-[#034326] mb-4">Geriatric Care</h4>
+                <p class="text-sm text-[#4b4b4b]">Specialized programs for elderly health, ensuring comfort and vitality for your parents.</p>
+            </div>
+            <div class="bg-[#FFEED0] p-10 rounded-3xl shadow-sm
+border border-[#D6B476]/40">
+
+                <h4 class="text-2xl text-[#034326] mb-4">Scientific Purity</h4>
+                <p class="text-sm text-[#4b4b4b]">Rigorous hygiene standards and NABH quality protocols in every treatment.</p>
+            </div>
+        </div>
+    </section>
+
+   <div class="fixed bottom-10 left-6 flex flex-col space-y-4 z-50">
+
+    <!-- CALL BUTTON -->
+    <a href="tel:+919746603646"
+       class="w-12 h-12 bg-[#034326] text-[#D6B476] rounded-full
+              flex items-center justify-center shadow-xl
+              hover:scale-110 transition"
+       title="Call Us">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.72 11.72 0 003.7.59 1 1 0 011 1V20a1 1 0 01-1 1A16 16 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.7 1 1 0 01-.27 1.11l-2.2 2.2z"/>
+        </svg>
+    </a>
+
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/919746603646?text=Hello%2C%20I%20need%20help%20with%20booking%20a%20consultation."
+   target="_blank"
+   rel="noopener noreferrer"
+   class="w-12 h-12 bg-[#034326] text-[#D6B476] rounded-full
+          flex items-center justify-center shadow-xl
+          hover:scale-110 transition"
+   title="Chat on WhatsApp">
+
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.025 3.204l-.548 2.037 2.058-.541c.952.518 1.989.857 3.233.858 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.758-5.768-5.758zm3.411 8.21c-.144.406-.833.743-1.135.789-.283.042-.653.076-1.045-.053-.246-.081-.555-.192-.937-.36-1.6-.702-2.612-2.338-2.692-2.446-.08-.108-.655-.873-.655-1.666s.414-1.184.559-1.334c.145-.15.315-.187.421-.187h.3c.091 0 .211.002.301.213.111.26.38.927.413.996.033.069.055.149.01.24-.045.091-.068.146-.136.225-.068.079-.143.176-.204.236-.069.068-.141.141-.061.279.08.138.355.586.761.948.523.465.964.609 1.102.677.138.069.218.057.299-.037.081-.095.344-.403.436-.54.092-.138.185-.115.312-.069.127.047.807.381.947.45.14.07.234.103.268.161.034.057.034.331-.11.737z"/>
+    </svg>
+</a>
+
+
+</div>
+
+
+    <!-- Live Chat Trigger -->
+<div class="fixed bottom-0 right-6 z-50">
+
+    <!-- Online badge -->
+    <div class="flex items-center gap-2 bg-[#FFEED0] border border-[#D6B476] px-3 py-1 rounded-t-lg">
+        <span class="text-red-500 font-bold">●</span>
+        <span class="text-xs font-semibold">We are Online!</span>
+    </div>
+
+    <!-- Button -->
+    <button onclick="toggleChat()"
+        class="bg-[#034326] text-[#FFEED0] px-5 py-2 rounded-t-lg font-bold text-xs w-full">
+        💬 Live Chat
+    </button>
+</div>
+<!-- Chat Box -->
+<div id="chatBox"
+     class="hidden fixed bottom-20 right-6 w-80 bg-white rounded-2xl shadow-2xl z-50 overflow-hidden">
+
+    <!-- Header -->
+<div class="bg-[#034326] p-3 flex justify-between items-center">
+
+    <!-- Logo -->
+    <div class="flex items-center">
+        <img
+            src="{% static 'images/logo2.png' %}"
+            alt="Anura Ayurveda Logo"
+            class="h-8 w-auto object-contain"
+        >
+    </div>
+
+    <!-- Close Button -->
+    <button onclick="toggleChat()" class="text-[#FFEED0] text-xl font-bold">
+        ×
+    </button>
+</div>
+    <!-- Messages -->
+    <div id="chatMessages"
+         class="p-4 space-y-3 text-sm h-64 overflow-y-auto bg-[#F9FAF9]">
+
+        <div class="bg-emerald-100 p-3 rounded-xl w-fit">
+            Namaste 👋 How can we help you today?
+        </div>
+
+    </div>
+
+    <!-- Preset Questions -->
+    <div class="p-3 border-t space-y-2">
+
+        <button onclick="sendMessage('How to book a consultation?')"
+            class="w-full text-left bg-white border rounded-xl px-3 py-2 hover:bg-gray-100">
+            📅 How to book a consultation?
+        </button>
+
+        <button onclick="sendMessage('Consultation fees details')"
+            class="w-full text-left bg-white border rounded-xl px-3 py-2 hover:bg-gray-100">
+            💰 Consultation fees details
+        </button>
+
+        <button onclick="sendMessage('Doctor availability')"
+            class="w-full text-left bg-white border rounded-xl px-3 py-2 hover:bg-gray-100">
+            👨‍⚕️ Doctor availability
+        </button>
+
+        <button onclick="openWhatsApp()"
+            class="w-full bg-[#25D366] text-white rounded-xl px-3 py-2 font-semibold">
+            📲 Chat on WhatsApp
+        </button>
+
+    </div>
+</div>
+<script>
+function toggleChat() {
+    document.getElementById("chatBox").classList.toggle("hidden");
+}
+
+function sendMessage(question) {
+    const chat = document.getElementById("chatMessages");
+
+    chat.innerHTML += `
+        <div class="bg-[#034326] text-white p-3 rounded-xl w-fit ml-auto">
+            ${question}
+        </div>
+    `;
+
+    let answer = "";
+
+    if (question.includes("book")) {
+        answer = "You can book a consultation from the Book Consultation page. Our team will confirm your slot via phone.";
+    } else if (question.includes("fees")) {
+        answer = "Consultation fees depend on the doctor and treatment type. Please contact us for details.";
+    } else if (question.includes("availability")) {
+        answer = "Doctors are available Monday to Saturday, 9 AM to 6 PM.";
+    }
+
+    setTimeout(() => {
+        chat.innerHTML += `
+            <div class="bg-emerald-100 p-3 rounded-xl w-fit">
+                ${answer}
+            </div>
+        `;
+        chat.scrollTop = chat.scrollHeight;
+    }, 500);
+}
+
+function openWhatsApp() {
+    window.open(
+        "https://wa.me/919876543210?text=Hello%2C%20I%20need%20help%20with%20consultation.",
+        "_blank"
+    );
+}
+</script>
+</body>
+</html>
