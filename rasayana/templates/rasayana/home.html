@@ -33,7 +33,7 @@
             rgba(3, 67, 38, 0.92) 0%,
             rgba(3, 67, 38, 0.3) 10%
         ),
-        url("{% static 'images/Newyearpost1.JPG' %}");
+       url("{% static 'images/Newyearpost1.JPG' %}");
     background-size: cover;
     background-position: center;
 }
@@ -59,36 +59,62 @@
 
 <body class="bg-[#D6B476] text-[#034326]">
 
+<nav class="flex items-center justify-between px-6 lg:px-10 py-4 bg-[#D6B476] sticky top-0 z-50 shadow-md">
 
-    <nav class="flex items-center justify-between px-10 py-4 bg-[#D6B476] sticky top-0 z-50 shadow-md ">
+    <!-- Logo -->
+    <div class="flex items-center">
+        <img
+            src="{% static 'images/logo1.png' %}"
+            alt="Anura Ayurveda Logo"
+            class="h-14 w-auto object-contain"
+        >
+    </div>
 
-       <!-- Left: Logo -->
-       <div class="flex items-center h-full">
-    <img
-        src="{% static 'images/logo1.png' %}"
-        alt="Anura Ayurveda Logo"
-        class="h-16 w-auto object-contain translate-y-[1px]"
-    >
-</div>
-        <div class="hidden lg:flex space-x-6 text-sm font-medium text-black">
-             <a href="{% url 'home' %}" class="text-[#FFEED0] border-b-2 border-[#FFEED0]">Home</a>
-            <a href="{% url 'about' %}" class="hover:text-[#FFEED0]">About</a>
-            <a href="{% url 'team' %}" class="hover:text-[#FFEED0]">Our Team</a>
-            <a href="{% url 'gallery' %}" class="hover:text-[#FFEED0]">Gallery</a>
-            <a href="{% url 'contact' %}" class="hover:text-[#FFEED0]">Contact Us</a>
-        </div>
+    <!-- Desktop Menu -->
+    <div class="hidden lg:flex space-x-6 text-sm font-medium text-black">
+        <a href="{% url 'home' %}" class="text-[#FFEED0] border-b-2 border-[#FFEED0]">Home</a>
+        <a href="{% url 'about' %}" class="hover:text-[#FFEED0]">About</a>
+        <a href="{% url 'team' %}" class="hover:text-[#FFEED0]">Our Team</a>
+        <a href="{% url 'gallery' %}" class="hover:text-[#FFEED0]">Gallery</a>
+        <a href="{% url 'contact' %}" class="hover:text-[#FFEED0]">Contact Us</a>
+    </div>
+
+    <!-- Desktop Button -->
+    <div class="hidden lg:block">
         <a href="{% url 'book_consultation' %}">
-        <button class="bg-[#034326] text-[#FFEED0] px-6 py-2 rounded-full text-sm font-bold hover:bg-[#022d1a] transition">
+            <button class="bg-[#034326] text-[#FFEED0] px-6 py-2 rounded-full text-sm font-bold hover:bg-[#022d1a] transition">
+                Book Consultation
+            </button>
+        </a>
+    </div>
 
+    <!-- Mobile Hamburger -->
+    <button id="menuBtn" class="lg:hidden text-2xl text-[#034326]">
+        ☰
+    </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden flex flex-col bg-[#D6B476] px-6 py-4 space-y-4 text-black font-medium lg:hidden">
+    <a href="{% url 'home' %}" class="hover:text-[#FFEED0]">Home</a>
+    <a href="{% url 'about' %}" class="hover:text-[#FFEED0]">About</a>
+    <a href="{% url 'team' %}" class="hover:text-[#FFEED0]">Our Team</a>
+    <a href="{% url 'gallery' %}" class="hover:text-[#FFEED0]">Gallery</a>
+    <a href="{% url 'contact' %}" class="hover:text-[#FFEED0]">Contact Us</a>
+
+    <a href="{% url 'book_consultation' %}">
+        <button class="w-full bg-[#034326] text-[#FFEED0] px-6 py-2 rounded-full text-sm font-bold">
             Book Consultation
         </button>
-        </a>
-    </nav>
+    </a>
+</div>
 
 
-     <header class="relative h-[100vh] hero-overlay flex items-center px-10 md:px-20">
+     <header class="relative min-h-screen hero-overlay flex items-center px-10 md:px-20">
 
         <div class="max-w-xl text-white">
+
+
 
             <div class="flex flex-col sm:flex-row gap-6">
                 <a href="{% url 'book_consultation' %}">
@@ -317,6 +343,15 @@
     </footer>
 
 <script>
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+if (menuBtn) {
+    menuBtn.addEventListener("click", function() {
+        mobileMenu.classList.toggle("hidden");
+    });
+}
+
 function toggleChat() {
     document.getElementById("chatBox").classList.toggle("hidden");
 }

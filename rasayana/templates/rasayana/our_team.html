@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Team | Rasayana Ayurvedic Centre</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
@@ -17,9 +19,11 @@
             background-size: cover;
             background-position: center;
         }
+
         .doctor-card {
             transition: all 0.3s ease;
         }
+
         .doctor-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.08);
@@ -29,227 +33,146 @@
 
 <body class="bg-[#FFEED0] text-[#2f2f2f]">
 
+<!-- ================= NAVBAR ================= -->
 
-   <nav class="flex items-center justify-between px-10 py-4 bg-[#D6B476] sticky top-0 z-50 shadow-md border-b border-[#D6B476]/40">
-
-
-         <!-- Left: Logo -->
-       <div class="flex items-center h-full">
-    <img
-        src="{% static 'images/logo1.png' %}"
-        alt="Anura Ayurveda Logo"
-        class="h-16 w-auto object-contain translate-y-[1px]"
-    >
-</div>
-        <div class="hidden lg:flex space-x-6 text-sm font-medium text-black">
-             <a href="{% url 'home' %}" class="hover:text-[#FFEED0]">Home</a>
-            <a href="{% url 'about' %}" class="hover:text-[#FFEED0]">About</a>
-            <a href="{% url 'team' %}" class="text-[#FFEED0] border-b-2 border-[#FFEED0]">Our Team</a>
-            <a href="{% url 'gallery' %}" class="hover:text-[#FFEED0]">Gallery</a>
-            <a href="{% url 'contact' %}" class="hover:text-[#FFEED0]">Contact Us</a>
-        </div>
-        <a href="{% url 'book_consultation' %}">
-        <button class="bg-[#034326] text-[#FFEED0] px-6 py-2 rounded-full text-sm font-bold hover:bg-[#022d1a] transition">
-    Book Consultation
-</button>
-
-        </a>
-    </nav>
-
-    <section class="relative h-[300px] team-banner flex flex-col justify-center px-10 md:px-24">
-        <h2 class="text-white text-4xl md:text-5xl lg:text-6xl mb-4">Meet Our Expert Medical Team</h2>
-        <div class="flex items-center space-x-2 text-sm">
-            <a href="#" class="text-white">Home</a>
-            <span class="text-[#D6B476]">/</span>
-            <span class="text-[#D6B476]">Our Team</span>
-        </div>
-    </section>
-
-    <section class="py-16 text-center px-6">
-        <h3 class="text-3xl md:text-4xl text-[#034326] mb-4">The Best Ayurvedic Hospital in Kerala</h3>
-        <div class="w-20 h-1 bg-[#D6B476] mx-auto"></div>
-    </section>
-
-    <section class="pb-24 px-6 md:px-24 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-            <div class="doctor-card bg-white border border-[#D6B476]/40
-rounded-2xl p-8 shadow-sm">
-
-                <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-[#D6B476]/40 mb-6">
-                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=400" alt="Chief Physician" class="w-full h-full object-cover">
-                </div>
-                <h4 class="text-2xl text-[#034326] font-bold uppercase">DR. V MADHAVACHANDRAN</h4><br>
-                <p class="text-[#D6B476] font-semibold text-sm mb-4">BAMS, FABMS.( Chief Technical Officer and Chief Physician)</p>
-                <div class="w-full border-t border-gray-100 pt-6">
-                    <p class="text-[#034326] text-sm leading-relaxed">
-                        Dr. V.Madhavachandran is a senior Ayurvedic physician with more than 30 years of experience. He has vast experience in treating various diseases . He is a also a well known researcher with 19 international publications in high impact international research journals. He has carried out studies on geriatrics, infertility, malignancy, neuro -muscular diseases, and Cardiology. He is also a person well known in the field of drug development.
-                    </p>
-                </div>
-            </div>
-
-            <div class="doctor-card bg-white border border-[#D6B476]/40
-rounded-2xl p-8 shadow-sm">
-
-                <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-[#D6B476]/40 mb-6">
-                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=400" alt="Consultant" class="w-full h-full object-cover">
-                </div>
-                <h4 class="text-2xl text-[#034326] font-bold uppercase">DR. JINTU JOSE</h4><br>
-                <p class="text-[#D6B476] font-semibold text-sm mb-4">BAMS (Quality Co- ordinator & Consulting Physician)</p>
-                <div class="w-full border-t border-[#D6B476]/30
- pt-6">
-                    <p class="text-[#034326] text-sm leading-relaxed">
-
-                        Graduate from Government Ayurveda College Tripunithura. Completed Certificate course on Smrithi Meditation(CSM) and Certificate course on Nutrition and Ayurveda Dietetics(CNAD) from Kottakkal Ayurveda School of Excellence and Foundation Course on Pain and Palliative Care(FCPC) from Trivandrum Institute of Palliative Sciences. She has expertise in Women's health care and Smrithi meditation therapy. Working with Anura Ayurveda Centre for 5 years.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <div class="fixed bottom-10 left-6 flex flex-col space-y-4 z-50">
-
-    <!-- CALL BUTTON -->
-    <a href="tel:+919746603646"
-       class="w-12 h-12 bg-[#034326] text-[#D6B476] rounded-full
-              flex items-center justify-center shadow-xl
-              hover:scale-110 transition"
-       title="Call Us">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.72 11.72 0 003.7.59 1 1 0 011 1V20a1 1 0 01-1 1A16 16 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.7 1 1 0 01-.27 1.11l-2.2 2.2z"/>
-        </svg>
-    </a>
-
-    <!-- WHATSAPP BUTTON -->
-    <a href="https://wa.me/919746603646?text=Hello%2C%20I%20need%20help%20with%20booking%20a%20consultation."
-   target="_blank"
-   rel="noopener noreferrer"
-   class="w-12 h-12 bg-[#034326] text-[#D6B476] rounded-full
-          flex items-center justify-center shadow-xl
-          hover:scale-110 transition"
-   title="Chat on WhatsApp">
-
-    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.025 3.204l-.548 2.037 2.058-.541c.952.518 1.989.857 3.233.858 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.758-5.768-5.758zm3.411 8.21c-.144.406-.833.743-1.135.789-.283.042-.653.076-1.045-.053-.246-.081-.555-.192-.937-.36-1.6-.702-2.612-2.338-2.692-2.446-.08-.108-.655-.873-.655-1.666s.414-1.184.559-1.334c.145-.15.315-.187.421-.187h.3c.091 0 .211.002.301.213.111.26.38.927.413.996.033.069.055.149.01.24-.045.091-.068.146-.136.225-.068.079-.143.176-.204.236-.069.068-.141.141-.061.279.08.138.355.586.761.948.523.465.964.609 1.102.677.138.069.218.057.299-.037.081-.095.344-.403.436-.54.092-.138.185-.115.312-.069.127.047.807.381.947.45.14.07.234.103.268.161.034.057.034.331-.11.737z"/>
-    </svg>
-</a>
-
-
-</div>
-
-
-    <!-- Live Chat Trigger -->
-<div class="fixed bottom-0 right-6 z-50">
-
-    <!-- Online badge -->
-    <div class="flex items-center gap-2 bg-[#FFEED0] border border-[#D6B476] px-3 py-1 rounded-t-lg">
-        <span class="text-red-500 font-bold">●</span>
-        <span class="text-xs font-semibold">We are Online!</span>
-    </div>
-
-    <!-- Button -->
-    <button onclick="toggleChat()"
-        class="bg-[#034326] text-[#FFEED0] px-5 py-2 rounded-t-lg font-bold text-xs w-full">
-        💬 Live Chat
-    </button>
-</div>
-<!-- Chat Box -->
-<div id="chatBox"
-     class="hidden fixed bottom-20 right-6 w-80 bg-white rounded-2xl shadow-2xl z-50 overflow-hidden">
-
-    <!-- Header -->
-<div class="bg-[#034326] p-3 flex justify-between items-center">
+<nav class="bg-[#D6B476] sticky top-0 z-50 shadow-md">
+  <div class="flex items-center justify-between px-6 md:px-10 py-4">
 
     <!-- Logo -->
-    <div class="flex items-center">
-        <img
-            src="{% static 'images/logo2.png' %}"
-            alt="Anura Ayurveda Logo"
-            class="h-8 w-auto object-contain"
-        >
+    <div>
+      <img src="{% static 'images/logo1.png' %}"
+           class="h-14 md:h-16 w-auto object-contain">
     </div>
 
-    <!-- Close Button -->
-    <button onclick="toggleChat()" class="text-[#FFEED0] text-xl font-bold">
-        ×
+    <!-- Desktop Menu -->
+    <div class="hidden lg:flex space-x-6 text-sm font-medium text-black">
+      <a href="{% url 'home' %}" class="hover:text-[#FFEED0]">Home</a>
+      <a href="{% url 'about' %}" class="hover:text-[#FFEED0]">About</a>
+      <a href="{% url 'team' %}" class="text-[#FFEED0] border-b-2 border-[#FFEED0]">Our Team</a>
+      <a href="{% url 'gallery' %}" class="hover:text-[#FFEED0]">Gallery</a>
+      <a href="{% url 'contact' %}" class="hover:text-[#FFEED0]">Contact</a>
+    </div>
+
+    <!-- Desktop Button -->
+    <div class="hidden lg:block">
+      <a href="{% url 'book_consultation' %}">
+        <button class="bg-[#034326] text-[#FFEED0] px-6 py-2 rounded-full text-sm font-bold hover:bg-[#022d1a] transition">
+          Book Consultation
+        </button>
+      </a>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button id="menuBtn" class="lg:hidden text-[#034326] text-3xl">
+      ☰
     </button>
-</div>
-    <!-- Messages -->
-    <div id="chatMessages"
-         class="p-4 space-y-3 text-sm h-64 overflow-y-auto bg-[#F9FAF9]">
 
-        <div class="bg-emerald-100 p-3 rounded-xl w-fit">
-            Namaste 👋 How can we help you today?
-        </div>
+  </div>
 
-    </div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden lg:hidden px-6 pb-6 space-y-4 text-black font-medium">
 
-    <!-- Preset Questions -->
-    <div class="p-3 border-t space-y-2">
+    <a href="{% url 'home' %}" class="block hover:text-[#034326]">Home</a>
+    <a href="{% url 'about' %}" class="block hover:text-[#034326]">About</a>
+    <a href="{% url 'team' %}" class="block text-[#034326] font-semibold">Our Team</a>
+    <a href="{% url 'gallery' %}" class="block hover:text-[#034326]">Gallery</a>
+    <a href="{% url 'contact' %}" class="block hover:text-[#034326]">Contact</a>
 
-        <button onclick="sendMessage('How to book a consultation?')"
-            class="w-full text-left bg-white border rounded-xl px-3 py-2 hover:bg-gray-100">
-            📅 How to book a consultation?
-        </button>
+    <a href="{% url 'book_consultation' %}">
+      <button class="w-full bg-[#034326] text-[#FFEED0] py-2 rounded-full text-sm font-bold">
+        Book Consultation
+      </button>
+    </a>
 
-        <button onclick="sendMessage('Consultation fees details')"
-            class="w-full text-left bg-white border rounded-xl px-3 py-2 hover:bg-gray-100">
-            💰 Consultation fees details
-        </button>
+  </div>
+</nav>
 
-        <button onclick="sendMessage('Doctor availability')"
-            class="w-full text-left bg-white border rounded-xl px-3 py-2 hover:bg-gray-100">
-            👨‍⚕️ Doctor availability
-        </button>
+<!-- ================= BANNER ================= -->
 
-        <button onclick="openWhatsApp()"
-            class="w-full bg-[#25D366] text-white rounded-xl px-3 py-2 font-semibold">
-            📲 Chat on WhatsApp
-        </button>
+<section class="relative h-[250px] md:h-[300px] team-banner flex flex-col justify-center px-6 md:px-24 text-center md:text-left">
+    <h2 class="text-white text-3xl md:text-5xl lg:text-6xl mb-4">
+        Meet Our Expert Medical Team
+    </h2>
+</section>
 
-    </div>
-</div>
-<script>
-function toggleChat() {
-    document.getElementById("chatBox").classList.toggle("hidden");
-}
+<!-- ================= TITLE ================= -->
 
-function sendMessage(question) {
-    const chat = document.getElementById("chatMessages");
+<section class="py-12 md:py-16 text-center px-6">
+    <h3 class="text-2xl md:text-4xl text-[#034326] mb-4">
+        The Best Ayurvedic Hospital in Kerala
+    </h3>
+    <div class="w-20 h-1 bg-[#D6B476] mx-auto"></div>
+</section>
 
-    chat.innerHTML += `
-        <div class="bg-[#034326] text-white p-3 rounded-xl w-fit ml-auto">
-            ${question}
-        </div>
-    `;
+<!-- ================= DOCTOR CARDS ================= -->
 
-    let answer = "";
+<section class="pb-16 md:pb-24 px-6 md:px-24 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-    if (question.includes("book")) {
-        answer = "You can book a consultation from the Book Consultation page. Our team will confirm your slot via phone.";
-    } else if (question.includes("fees")) {
-        answer = "Consultation fees depend on the doctor and treatment type. Please contact us for details.";
-    } else if (question.includes("availability")) {
-        answer = "Doctors are available Monday to Saturday, 9 AM to 6 PM.";
-    }
+        <!-- Doctor 1 -->
+        <div class="doctor-card bg-white border border-[#D6B476]/40 rounded-2xl p-6 md:p-8 shadow-sm text-center md:text-left">
 
-    setTimeout(() => {
-        chat.innerHTML += `
-            <div class="bg-emerald-100 p-3 rounded-xl w-fit">
-                ${answer}
+            <div class="flex justify-center md:justify-start">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-[#D6B476]/40 mb-6">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=400"
+                         class="w-full h-full object-cover">
+                </div>
             </div>
-        `;
-        chat.scrollTop = chat.scrollHeight;
-    }, 500);
-}
 
-function openWhatsApp() {
-    window.open(
-        "https://wa.me/919876543210?text=Hello%2C%20I%20need%20help%20with%20consultation.",
-        "_blank"
-    );
-}
+            <h4 class="text-xl md:text-2xl text-[#034326] font-bold uppercase">
+                DR. V MADHAVACHANDRAN
+            </h4>
+
+            <p class="text-[#D6B476] font-semibold text-sm mb-4">
+                BAMS, FABMS (Chief Technical Officer & Chief Physician)
+            </p>
+
+            <p class="text-[#034326] text-sm leading-relaxed">
+                Senior Ayurvedic physician with 30+ years of experience.
+                Published 19 international research papers. Expertise in
+                geriatrics, infertility, malignancy, neuromuscular diseases
+                and cardiology.
+            </p>
+        </div>
+
+        <!-- Doctor 2 -->
+        <div class="doctor-card bg-white border border-[#D6B476]/40 rounded-2xl p-6 md:p-8 shadow-sm text-center md:text-left">
+
+            <div class="flex justify-center md:justify-start">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-[#D6B476]/40 mb-6">
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=400"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <h4 class="text-xl md:text-2xl text-[#034326] font-bold uppercase">
+                DR. JINTU JOSE
+            </h4>
+
+            <p class="text-[#D6B476] font-semibold text-sm mb-4">
+                BAMS (Quality Coordinator & Consulting Physician)
+            </p>
+
+            <p class="text-[#034326] text-sm leading-relaxed">
+                Graduate from Government Ayurveda College Tripunithura.
+                Specialized in women's healthcare, meditation therapy,
+                Ayurveda nutrition and palliative care.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= MOBILE MENU SCRIPT ================= -->
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", function() {
+    mobileMenu.classList.toggle("hidden");
+});
 </script>
+
 </body>
 </html>
